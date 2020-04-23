@@ -52,8 +52,9 @@ const formValidation = yup.object().shape({
   password: yup
     .string()
     .required("password is required"),
-  //termsOfService: yup
-   // .required("you must agree to terms of service")
+  termsOfService: yup
+   .boolean()
+   .oneOf([true], "terms of service must be accepted")
 
 })
 
