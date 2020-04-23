@@ -151,6 +151,7 @@ useEffect(()=> {
 // console.log(newUser)
     postUser(newUser)
     setFormValues(initialFormValues)
+    
   };
 
   return (
