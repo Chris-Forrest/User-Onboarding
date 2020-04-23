@@ -16,6 +16,18 @@ describe('User Sign up ', () =>{
         cy.get('[data-cy_username_input="cy_username_input"]')
         .type(username)
         .should('have.value', username)
+
+    })
+    it('can input a email', () => {
+        cy.get('[data-cy_email_input="cy_email_input"]')
+        .type(email)
+        .should('have.value', email)
+    })
+    it('can input a password', () => {
+        cy.get('[data-cy_password_input="cy_password_input"]')
+        .type(password)
+        .should('have.value', password)
+
     })
 
 
