@@ -13,7 +13,9 @@ describe('User Sign up ', () =>{
     })
 
     it('can input a username', () => {
-        cy.get()
+        cy.get('[data-cy_username_input="cy_username_input"]')
+        .type(username)
+        .should('have.value', username)
     })
 
 
