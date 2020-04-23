@@ -18,7 +18,7 @@ border-radius: 5px;
 box-shadow: 10px 8px 12px -2px rgb(128, 127, 197);
 margin: 8px;
 padding: 12px;
-background-color:#39aafa;
+background-color:#cfebff;
 width: 50%;
 `
 
@@ -153,6 +153,7 @@ useEffect(()=> {
 
   return (
     <StyledContainer>
+      <h1>User Signup/ User List</h1>
       <Form
         values={formValues}
         changeValues={changeValues}
