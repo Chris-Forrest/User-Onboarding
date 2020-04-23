@@ -6,6 +6,10 @@ import Form from "./components/Form";
 import "./App.css";
 
 const StyledContainer = styled.div`
+margin-left:25%;
+`
+
+const StyledDiv = styled.div`
 display:flex;
 flex-direction:column;
 align-items:center;
@@ -48,7 +52,8 @@ const formValidation = yup.object().shape({
   password: yup
     .string()
     .required("password is required"),
-   
+  //termsOfService: yup
+   // .required("you must agree to terms of service")
 
 })
 
@@ -154,8 +159,8 @@ useEffect(()=> {
         checkboxChange={checkboxChange}
         submitUser={submitUser}
         disabled={formDisabled}
-        errors={formErrors}
-      />
+        errors={formErrors}/>
+        <StyledDiv>
       {
         users.map(user=>{
          return( <div className="userCard">
@@ -164,6 +169,7 @@ useEffect(()=> {
           </div>)
         })
       }
+      </StyledDiv>
     </StyledContainer>
   );
 }
