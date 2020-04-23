@@ -48,7 +48,7 @@ export default function Form({
             {errors.password}
         </Warning>
         <Warning>
-            {errors.terms}
+            {errors.termsOfService}
         </Warning>
       </div>
       <StyledLabel>User Name</StyledLabel>
