@@ -11,4 +11,11 @@ describe('User Sign up ', () =>{
     it('successfuly loads', ()=> {
         cy.visit('http://localhost:3000/')
     })
+
+    it('can input a username', () => {
+        cy.get()
+    })
+
+
+
 })

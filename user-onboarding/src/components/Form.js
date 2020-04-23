@@ -53,14 +53,20 @@ export default function Form({
       </div>
       <StyledLabel>User Name</StyledLabel>
       <input
+        data-cy_username_input='cy_username_input'
         name="username"
         value={values.username}
         onChange={changeValues}
       ></input>
       <StyledLabel>Email</StyledLabel>
-      <input name="email" value={values.email} onChange={changeValues}></input>
+      <input 
+      data-cy_email_input='cy_email_input'
+      name="email" 
+      value={values.email} 
+      onChange={changeValues}></input>
       <StyledLabel>Password</StyledLabel>
       <input
+        data-cy_password_input='cy_password_input'
         name="password"
         value={values.password}
         onChange={changeValues}
