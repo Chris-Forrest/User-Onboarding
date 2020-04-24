@@ -57,6 +57,6 @@ describe('User Sign up ', () =>{
     it("input the password error", () => {
         cy.get('.errors').contains("password must be at least six characters long")
     })
-
+    
 
 })
