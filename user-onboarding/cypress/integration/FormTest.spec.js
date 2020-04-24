@@ -13,12 +13,12 @@ describe('User Sign up ', () =>{
         cy.visit('http://localhost:3000/')
     })
 
-    it('can input a username', () => {
+    it('can can create a username', () => {
         cy.get('[data-cy_username_input="cy_username_input"]')
         .type(username)
         .should('have.value', username)
-
     })
+    
     it('can input a email', () => {
         cy.get('[data-cy_email_input="cy_email_input"]')
         .type(email)
@@ -33,7 +33,29 @@ describe('User Sign up ', () =>{
         cy.get('[data-cy_checkbox="cy_checkbox"]').check().should('checked')
     })
     it('can submit a user', () => {
-        cy.get('[data-cy_submit_button="cy_submit_button"]')
+        cy.get('[data-cy_submit_button="cy_submit_button"]').click()
+    })
+   it("input an invalid username", () => {
+        cy.get('[data-cy_username_input="cy_username_input"]')
+        .type('a').should("have.value", 'a')
+      })
+     it 
+      it("validate the user name error", () => {
+        cy.get('.errors').contains("username must have at least 3 characters!")
+      })
+      it("input an invalid email", () => {
+          cy.get('[data-cy_email_input="cy_email_input"]')
+          .type('a').should("have.value", 'a')
+      })
+      it("input the email error", () => {
+          cy.get('.errors').contains("a VALID email is required")
+      })
+      it("input an invalid email", () => {
+        cy.get('[data-cy_password_input="cy_password_input"]')
+        .type('a').should("have.value", 'a')
+    })
+    it("input the password error", () => {
+        cy.get('.errors').contains("password must be at least six characters long")
     })
 
 
