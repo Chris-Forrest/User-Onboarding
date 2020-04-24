@@ -3,6 +3,7 @@ const username = uuid().slice(0, 5)
 const email = `${username}@acme.com`
 const password = uuid().slice(0, 7)
 
+
 it('It works!!!', ()=> {
     expect (5).to.eq(5)
 })
@@ -27,9 +28,13 @@ describe('User Sign up ', () =>{
         cy.get('[data-cy_password_input="cy_password_input"]')
         .type(password)
         .should('have.value', password)
-
     })
-
+    it('can click terms of service box', () => {
+        cy.get('[data-cy_checkbox="cy_checkbox"]').check().should('checked')
+    })
+    it('can submit a user', () => {
+        cy.get('[data-cy_submit_button="cy_submit_button"]')
+    })
 
 
 })

@@ -73,11 +73,15 @@ export default function Form({
       ></input>
       <StyledLabel>Terms of Service</StyledLabel>
       <input
+        data-cy_checkbox='cy_checkbox'
         type="checkbox"
         name="termsOfService"
         onChange={checkboxChange}
       ></input>
-      <button onClick={submitUser} disabled={disabled}>
+      <button 
+      data-cy_submit_button='cy_submit_button'
+      onClick={submitUser} 
+      disabled={disabled}>
         Submit
       </button>
     </StyledForm>
