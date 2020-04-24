@@ -50,13 +50,13 @@ describe('User Sign up ', () =>{
       it("input the email error", () => {
           cy.get('.errors').contains("a VALID email is required")
       })
-      it("input an invalid email", () => {
+      it("input an password email", () => {
         cy.get('[data-cy_password_input="cy_password_input"]')
         .type('a').should("have.value", 'a')
     })
     it("input the password error", () => {
         cy.get('.errors').contains("password must be at least six characters long")
     })
-    
+
 
 })
