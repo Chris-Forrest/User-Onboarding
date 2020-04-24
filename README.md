@@ -1,3 +1,8 @@
+explain what end-to-end testing is and its importance
+
+End to End testing is  is a technique used to test whether the flow of an application right from start to finish is behaving as expected and the purpose of it is to identify system dependencies and to ensure that the data integrity is maintained between various system components and systems.
+
+
 # Module Project: Advanced Form Management - User Onboarding
 ## Project Description
 
