@@ -53,25 +53,35 @@ export default function Form({
       </div>
       <StyledLabel>User Name</StyledLabel>
       <input
+        data-cy_username_input='cy_username_input'
         name="username"
         value={values.username}
         onChange={changeValues}
       ></input>
       <StyledLabel>Email</StyledLabel>
-      <input name="email" value={values.email} onChange={changeValues}></input>
+      <input 
+      data-cy_email_input='cy_email_input'
+      name="email" 
+      value={values.email} 
+      onChange={changeValues}></input>
       <StyledLabel>Password</StyledLabel>
       <input
+        data-cy_password_input='cy_password_input'
         name="password"
         value={values.password}
         onChange={changeValues}
       ></input>
       <StyledLabel>Terms of Service</StyledLabel>
       <input
+        data-cy_checkbox='cy_checkbox'
         type="checkbox"
         name="termsOfService"
         onChange={checkboxChange}
       ></input>
-      <button onClick={submitUser} disabled={disabled}>
+      <button 
+      data-cy_submit_button='cy_submit_button'
+      onClick={submitUser} 
+      disabled={disabled}>
         Submit
       </button>
     </StyledForm>
